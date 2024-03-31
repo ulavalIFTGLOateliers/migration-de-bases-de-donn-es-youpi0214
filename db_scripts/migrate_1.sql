@@ -6,8 +6,8 @@ ALTER TABLE musician RENAME COLUMN singerName TO musicianName;
 CREATE TABLE band
 (
     bandName  varchar(50) PRIMARY KEY,
-    creation  YEAR NOT NULL,
-    bandGenre varchar(50) NOT NULL
+    creation  YEAR ,
+    bandGenre varchar(50)
 );
 
 INSERT INTO band (bandName, creation, bandGenre)
@@ -15,7 +15,7 @@ VALUES ('Crazy Duo', '2015', 'Rock'),
        ('Luna', '2009', 'classical'),
        ('Mysterio', '1960', 'pop');
 
-ALTER TABLE musician ADD COLUMN role varchar(50) NOT NULL;
+ALTER TABLE musician ADD COLUMN role varchar(50);
 ALTER TABLE musician ADD COLUMN bandName varchar(50) REFERENCES band(bandName);
 
 UPDATE musician SET role = 'vocals', bandName = 'Crazy Duo' WHERE musicianName = 'Alina';

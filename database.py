@@ -12,7 +12,6 @@ class Database:
             Chargez les variables d'environnement de votre fichier .env, puis complétez les lignes 15 à 19 afin de récupérer les valeurs de ces variables
         """
         load_dotenv()
-        print(os.getenv("HOST"), os.getenv("PORT"), os.getenv("DATABASE"), os.getenv("USER"), os.getenv("PASSWORD"))
         self.host = os.getenv("HOST")
         self.port = int(os.getenv("PORT"))
         self.database = os.getenv("DATABASE")
