@@ -32,13 +32,13 @@ class Grader:
         """
 
         self.grading_template = OrderedDict({
-            # "prereq": {
-            #     "idul": {
-            #         "callable": self._idul,
-            #         "points": 1,
-            #         "passed": False
-            #     }
-            # },
+            "prereq": {
+                "idul": {
+                    "callable": self._idul,
+                    "points": 1,
+                    "passed": False
+                }
+            },
             "up": {
                 "connexion": {
                     "callable": self._up,
